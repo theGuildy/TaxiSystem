@@ -1,0 +1,22 @@
+16.17)
+•	The level of complexity in the steps outlined is just right, the order of the steps is appropriate as it goes from easier tasks to the more complex tasks in the taxi system.
+•	There is no ability to be able to cancel a taxi in the steps
+•	It’s not included the ability to order multiple shuttles for one large group of passengers
+•	For the last bullet point it is very vague in saying “provide all remaining functionality including full statistical data” it should specify which data we are gather – data to gather: pass/fail on rides, passenger details
+16.18)
+•	The completion criteria is sufficient to create tests on completion
+16.19)
+•	We have ensured that we understand how movement of the taxi is effected its act method
+16.20)
+•	It would be more efficient if we kept separate lists for available and busy taxis, when a trip is complete the taxi moves to the free list and moves back into buys once a taxi is booked.
+16.21)
+•	It does not support this functionality currently. It should take into account the number of passengers travelling and the max number of passengers in the taxi and calculate how many taxis to send for the ride.
+16.22)
+•	The difference is that one is a list and the other is a map and it does not support multiple passengers to be picked up from the same location, to allow for multiple passengers to be picked together, TaxiCompany would need another list/HashMap to add multiple passenger in a ride together.
+16.23)
+•	Creating a unique booking number for each association would help. No it shouldn’t need to change any method signatures in the Vehicle hierarchy.
+16.24)
+•	We think its possible to use these tests as regression test when any development is implemented, and it does not require substantial changes.
+16.25)
+•	Test for cancelling taxi to be implement
+

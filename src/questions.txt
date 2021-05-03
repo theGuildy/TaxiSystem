@@ -18,5 +18,4 @@
 16.24)
 •	We think its possible to use these tests as regression test when any development is implemented, and it does not require substantial changes.
 16.25)
-•	Test for cancelling taxi to be implement
-
+•	Test for cancelling taxi to be implemented

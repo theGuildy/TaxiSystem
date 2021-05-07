@@ -52,6 +52,10 @@ public class Shuttle extends Vehicle
     {
         destinations.add(location);
         chooseTargetLocation();
+
+        if (location != null) {
+            throw new IllegalArgumentException("Location is already set");
+        }
     }
     
     /**

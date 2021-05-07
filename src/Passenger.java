@@ -28,6 +28,11 @@ public class Passenger implements DrawableItem
         if(destination == null) {
             throw new NullPointerException("Destination location");
         }
+
+        if(destination == pickup) {
+            throw new IllegalArgumentException("Pickup and destination can not be the same");
+        }
+
         this.pickup = pickup;
         this.destination = destination;
         // Load the image used to represent a person.

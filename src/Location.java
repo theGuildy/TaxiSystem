@@ -25,6 +25,14 @@ public class Location
             throw new IllegalArgumentException(
                         "Negative y-coordinate: " + y);
         }
+        if (x > 35) {
+            throw new IllegalArgumentException(
+                        " x-coordinate out of city: " + x);
+        }
+        if (y > 35) {
+             throw new IllegalArgumentException(
+                        " y-coordinate out of city: " + y);
+        }
         this.x = x;
         this.y = y;
     }

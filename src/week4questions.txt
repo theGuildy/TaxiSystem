@@ -1,4 +1,4 @@
 16.27)
 - For Taxi it stores the vehicle starting point and if it has a target location it moves towards it otherwise it records it as idle, it also keeps a record if the taxi is free for accepting passengers
 - For PassengerSource if a passenger is denied if all taxis are busy it keeps count of the number of missed pickups due to no free taxis. It also keeps track of the city and compnay it has to use.
-- If there's more taxis the taxi idle time increases and if there's less taxis there's a higher amount of missed pickups
+- If there's more taxis the taxi idle time increases and if there's less taxis there's a higher amount of missed pickups so it needs a balance

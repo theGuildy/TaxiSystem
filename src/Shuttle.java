@@ -66,6 +66,11 @@ public class Shuttle extends Vehicle
     public void pickup(Passenger passenger)
     {
         passengers.add(passenger);
+        // checks how many passengers are in shuttle with a max of 5
+        if (passengers.size() > 5){
+           throw new IllegalArgumentException("Too many passengers");
+
+        }
         destinations.add(passenger.getDestination());
         chooseTargetLocation();
     }

@@ -1,3 +1,6 @@
+import java.time.Duration;
+import java.time.Instant;
+
 /**
  * Model the common elements of taxis and shuttles.
  * 
@@ -13,6 +16,10 @@ public abstract class Vehicle implements Actor
     private Location targetLocation;
     // Record how often the vehicle has nothing to do.
     private int idleCount;
+    //Record travel time to pickup passenger
+    private Duration travelToPickUp;
+    //Record travel time to destination
+    private Duration travelToDestination;
     
     /**
      * Constructor of class Vehicle
@@ -148,5 +155,23 @@ public abstract class Vehicle implements Actor
     public void incrementIdleCount()
     {
         idleCount++;
+    }
+
+    /**
+     * increase the calculated travel time to pick up passengers
+     * @param start beginning of the journey
+     * @param end passenger is picked up
+     */
+    public void incrementTravelToPickup(Instant start, Instant end){
+        this.travelToPickUp = this.travelToPickUp.plus(Duration.between(start, end));
+    }
+
+    /**
+     * increase the calculated travel time to destinations
+     * @param start passenger is picked up
+     * @param end passenger is delivered
+     */
+    public void increaseTravelToDestination(Instant start, Instant end){
+        this.travelToDestination = this.travelToDestination.plus(Duration.between(start, end));
     }
 }
